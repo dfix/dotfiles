@@ -1,9 +1,32 @@
 echo "My GVIMRC Starting."
 
-" For Pathogen plugin manager
-execute pathogen#infect()
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set nocompatible              " be iMproved, required
+let $DDPATH=$HOME."/.dotfiles/vim"
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+echo &rtp
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+source $DDPATH/plugins.vim
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
@@ -54,7 +77,7 @@ set shiftwidth=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax on
-colorscheme desert
+colors zenburn
 
 set showmatch                        " Show matching braces when over one
 set ruler                            " Always show current position
@@ -157,6 +180,31 @@ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+nmap j gj
+nmap k gk
+nmap <C-e> :e#<CR>
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
+
+" CTRLP
+nmap ; :CtrlPBuffer<CR>
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
+
+" NERDTree
+nmap \e :NERDTreeToggle<CR>
+
+" hlsearch settings
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+nmap \q :nohlsearch<CR>
 
 " RESIZE with numlock +-/*
 if bufwinnr(1)
