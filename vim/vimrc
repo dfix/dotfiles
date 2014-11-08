@@ -185,6 +185,9 @@ nmap k gk
 nmap <C-e> :e#<CR>
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
+nmap <C-l> :tabn<CR>
+nmap <C-h> :tabp<CR>
+nmap <C-n> :tabnew<CR>
 
 " CTRLP
 nmap ; :CtrlPBuffer<CR>
