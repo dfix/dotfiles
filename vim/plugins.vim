@@ -38,8 +38,8 @@
     " Buffer unload and navigation
     Plugin 'vim-scripts/bufkill.vim'
 
-    " <Tab> everything!
-    Plugin 'ervandew/supertab'
+    " Manual Autocomplete
+    Plugin 'Shougo/neocomplete.vim'
 
     " Fuzzy finder (files, mru, etc)
     Plugin 'kien/ctrlp.vim'
@@ -88,5 +88,11 @@
     " Functions, class data etc.
     " REQUIREMENTS: (exuberant)-ctags
     Plugin 'majutsushi/tagbar'
-    "
+
+    " Python plugins
+    Plugin 'klen/python-mode'
+
+    " Autocomplete
+    Plugin 'Valloric/YouCompleteMe'
+
 " End of plugins.vim
