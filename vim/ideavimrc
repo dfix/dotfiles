@@ -1,0 +1,15 @@
+" Show status in statusbar
+set showmode
+
+" Map leader to ',' rather than \
+let mapleader = ","
+
+" General behavior
+set nocompatible
+set smartcase
+set ignorecase
+set hlsearch
+set incsearch
+set history = 500
+
+set backspace = indent,eol,start

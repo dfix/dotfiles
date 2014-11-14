@@ -73,7 +73,7 @@ set shiftwidth=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax on
-colors zenburn
+colors solarized
 
 set showmatch                        " Show matching braces when over one
 set ruler                            " Always show current position
