@@ -1,7 +1,7 @@
 echo "My GVIMRC Starting."
 
 set nocompatible              " be iMproved, required
-let $DDPATH=$HOME."/.vim"
+let $DDPATH=$HOME."/.dotfiles/vim"
 filetype off                  " required
 
 let mapleader = ","
@@ -73,7 +73,7 @@ set shiftwidth=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax on
-colorscheme solarized
+colors solarized
 
 set showmatch                        " Show matching braces when over one
 set ruler                            " Always show current position
