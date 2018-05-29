@@ -82,8 +82,7 @@
     Plugin 'mhinz/vim-signify'
 
     " Awesome syntax checker.
-    " REQUIREMENTS: See :h syntastic-intro
-    Plugin 'scrooloose/syntastic'
+    Plugin 'w0rp/ale'
 
     " Functions, class data etc.
     " REQUIREMENTS: (exuberant)-ctags
